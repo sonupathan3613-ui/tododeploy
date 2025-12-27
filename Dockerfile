@@ -1,7 +1,7 @@
 FROM python:3.12-slim
 WORKDIR /data
 
-RUN apt-get update && apt-get install -y python3-distutils \
+RUN pip install --upgrade pip setuptools wheel \
     && pip install django==3.2
 
 COPY . .
